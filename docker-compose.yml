@@ -17,7 +17,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./src/main/resources/schema.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./backend/resources/schema.sql:/docker-entrypoint-initdb.d/init.sql
     restart: unless-stopped
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB} -h localhost" ]
