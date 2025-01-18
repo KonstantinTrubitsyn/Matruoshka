@@ -1,0 +1,6 @@
+Flask
+Flask-JWT-Extended
+psycopg2
+Werkzeug
+PyJWT
+psycopg2-binary

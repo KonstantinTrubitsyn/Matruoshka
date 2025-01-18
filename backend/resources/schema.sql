@@ -3,8 +3,8 @@ CREATE TABLE users
     id        SERIAL PRIMARY KEY,
     email     VARCHAR(255) UNIQUE NOT NULL,
     password  VARCHAR(255)        NOT NULL,
-    full_name VARCHAR(255)        NOT NULL,
-    address   TEXT                NOT NULL
+    full_name VARCHAR(255),
+    address   TEXT
 );
 
 CREATE TABLE items
