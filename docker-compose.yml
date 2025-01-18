@@ -3,6 +3,8 @@ services:
     build:
       context: ./frontend
     container_name: frontend
+    networks:
+      - app_network
     ports:
       - "8080:80"
     restart: unless-stopped
@@ -14,6 +16,8 @@ services:
       POSTGRES_USER: app_user
       POSTGRES_PASSWORD: app_password
       POSTGRES_DB: app_db
+    networks:
+      - app_network
     ports:
       - "5432:5432"
     volumes:
@@ -24,3 +28,26 @@ services:
       interval: 2s
       timeout: 1s
       retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: app_db
+      DB_USER: app_user
+      DB_PASSWORD: app_password
+    networks:
+      - app_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "5050:5050"
+    restart: unless-stopped
+
+networks:
+  app_network:
+    driver: bridge
