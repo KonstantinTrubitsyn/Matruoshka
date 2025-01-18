@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --max-Width-width: 1400px;
+
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.container {
+    width: var(--max-Width-width);
+    height: auto;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+}
+
+.mainLogo {
+    width: var(--max-Width-width);
+
+    img {
+        width: 100%;
+        background-image: url('frontend/assets/image 7.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.scrollbar {
+    width: var(--max-Width-width);
+    height: 750px;
+    padding-top: 70px;
+    text-align: center;
+
+    h1 {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.img_scroll {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    li {
+        list-style: none;
+        width: 412px;
+        height: 549px;
+        background-color: black;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.mainPageSecond {
+    img {
+        width: var(--max-Width-width);
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    width: 100%;
+    height: 1165px;
+    /*background-image: url;*/
+    background: #000;
+    ul {
+        display: flex;
+        gap: 200px;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h3 {
+                color: gray;
+            }
+            button {
+                background: none;
+                border: none;
+                text-align: left;
+                color: white;
+            }
+        }
+    }
+}
+
+.privatPol {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    a {
+        text-decoration: none;
+        color : gray;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
